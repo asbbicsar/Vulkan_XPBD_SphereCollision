@@ -44,10 +44,10 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # -------------------------------------------------------------------
 # 5. copy shaders folder to exe file
 # -------------------------------------------------------------------
-add_custom_command(TARGET VulkanPhysicsSim POST_BUILD
+add_custom_command(TARGET Vulkan_Cloth_Collision_Sim POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_CURRENT_SOURCE_DIR}/shaders"
-        "$<TARGET_FILE_DIR:VulkanPhysicsSim>/shaders"
+        "$<TARGET_FILE_DIR:Vulkan_Cloth_Collision_Sim>/shaders"
     COMMENT "Copying shaders to the executable directory..."
 )
 
