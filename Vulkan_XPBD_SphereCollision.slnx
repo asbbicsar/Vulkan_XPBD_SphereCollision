@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="Vulkan_XPBD_SphereCollision/Vulkan_XPBD_SphereCollision.vcxproj" Id="8a99249e-1209-4d25-8a94-9850dde5330e" />
-</Solution>
