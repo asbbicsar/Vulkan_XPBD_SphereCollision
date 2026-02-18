@@ -1,8 +1,8 @@
-# Vulkan Particle
+# Vulkan XPBD Cloth-Sphere Collision
 
-이 프로젝트는 Vulkan API를 사용하여 구현한 파티클 시스템 중력 시뮬레이션입니다. 저장소 용량 최적화와 이식성을 위해 Vulkan SDK는 포함되어 있지 않으며, 환경 변수를 통해 로컬 SDK를 참조합니다.
+이 프로젝트는 Vulkan API를 사용하여 구현한 XPBD 방식의 옷감과 구의 충돌 시뮬레이션입니다. 저장소 용량 최적화와 이식성을 위해 Vulkan SDK는 포함되어 있지 않으며, 환경 변수를 통해 로컬 SDK를 참조합니다.
 
-This project is a particle system gravity simulation implemented using the Vulkan API. To optimize storage space and portability, the Vulkan SDK is not included, and the local SDK is referenced via environment variables.
+This project is a cloth-sphere collision simulation implemented by XPBD using the Vulkan API. To optimize storage space and portability, the Vulkan SDK is not included, and the local SDK is referenced via environment variables.
 
 ---
 
