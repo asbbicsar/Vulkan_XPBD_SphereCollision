@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-project(VulkanPhysicsSim)
+project(Vulkan_Cloth_Collision_Sim)
 
 # Standard C++ version
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SOURCES 
-    src/Vulkan_Particle.cpp
+    src/Vulkan_XPBD_SphereCollision.cpp
 )
 include(FetchContent)
 
