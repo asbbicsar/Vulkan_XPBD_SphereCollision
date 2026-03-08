@@ -784,7 +784,7 @@ private:
         }
     }
     void createComputePipeline() {
-        auto computeShaderCode = readFile("shaders/comp.spv"); // 컴파일된 스피어브이 파일
+        auto computeShaderCode = readFile("shaders/ComputeShader.comp.spv"); // 컴파일된 스피어브이 파일
         VkShaderModule computeShaderModule = createShaderModule(computeShaderCode);
 
         VkPipelineShaderStageCreateInfo shaderStageInfo{};
@@ -818,8 +818,8 @@ private:
         vkDestroyShaderModule(device, computeShaderModule, nullptr);
     }
     void createGraphicsPipeline() {
-        auto vertShaderCode = readFile("shaders/vert.spv");
-        auto fragShaderCode = readFile("shaders/frag.spv");
+        auto vertShaderCode = readFile("shaders/VertexShader.vert.spv");
+        auto fragShaderCode = readFile("shaders/FragmentShader.frag.spv");
 
         VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
         VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
