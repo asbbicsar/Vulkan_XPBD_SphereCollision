@@ -6,7 +6,8 @@ struct ClothNode {
     vec4 vel;
     vec4 normal;
     float isFixed;
-    float _padding[3];
+    float invMass;
+    float _padding[2];
 };
 
 // C++에서 설정한 Descriptor Sets와 매칭
@@ -37,10 +38,7 @@ shared float sharedInvMass[256];
 
 // 시뮬레이션 상수
 const float springRestLength = 0.1;
-//const float stiffness = 1048576.0;
-const float stiffness = 65536.0;
-//const float stiffness = 16382.0;
-//const float stiffness = 8192.0;
+const float stiffness = 128.0;
 const float damping = 0.98;
 const vec3 gravity = vec3(0.0, -9.8, 0.0);
 const int WIDTH = 16;
@@ -60,7 +58,7 @@ void main() {
     uint localIndex = ly * WIDTH + lx;
 
     ClothNode current = nodesIn[index];
-    float invMass = (current.isFixed > 0.5) ? 0.0 : 1.0;
+    float invMass = (current.isFixed > 0.5) ? 0.0 : current.invMass;
     sharedInvMass[localIndex] = invMass;
 
     vec3 p = current.pos.xyz;
